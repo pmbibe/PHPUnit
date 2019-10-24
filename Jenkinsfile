@@ -23,7 +23,7 @@ pipeline {
       steps {
         echo "--------------------Deploy Stage---------------------"
         sh "chmod +x PHPUnit/Deploy.sh"
-        sh "./Deploy.sh"
+        sh "PHPUnit/Deploy.sh"
       }
     }
   }
