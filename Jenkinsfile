@@ -16,7 +16,6 @@ pipeline {
         echo "--------------------Test Stage---------------------"
         sh "phpunit --bootstrap autoload.php --log-junit report.xml EmailTest"
         junit '*.xml'
-        if currentBuild.currentResult == 'SUCCESS' echo "hihi"
       }
     }
     stage('Deploy') {
