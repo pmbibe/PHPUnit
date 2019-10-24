@@ -14,9 +14,8 @@ pipeline {
     stage('Test') {
       steps {
         echo "--------------------Test Stage---------------------"
-        sh "phpunit --bootstrap autoload.php --log-junit report.xml  --coverage-html coverage --coverage-clover coverage.xml EmailTest"
+        sh "phpunit --bootstrap autoload.php --log-junit report.xml EmailTest"
         junit '*.xml'
-        clover '*.xml'
       }
     }
     stage('Deploy') {
