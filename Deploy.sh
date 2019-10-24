@@ -2,7 +2,7 @@
 Result=`python Result.py`
 if [ $Result -eq 0 ]
 then
-whoami
+echo "Failed"
 else
-pwd
+rsync -e ssh PHPUnit/*.php root@192.168.141.203:/usr/share/nginx/html
 fi
