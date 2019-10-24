@@ -6,6 +6,7 @@ pipeline {
     stage('Prepare') {
       steps {
         echo "--------------------Prepare Stage---------------------"
+        sh "rm -rf PHPUnit"
         sh "git clone https://github.com/pmbibe/PHPUnit"
         sh "phpunit --version"
       }
