@@ -5,18 +5,20 @@ pipeline {
   stages {
     stage('Prepare') {
       steps {
-        echo "1"
+        echo "--------------------Prepare Stage---------------------"
         sh "git clone https://github.com/pmbibe/PHPUnit"
+        sh "phpunit --version"
       }
     }
     stage('Test') {
       steps {
-        echo "2"
+        echo "--------------------Test Stage---------------------"
+        sh "phpunit --bootstrap autoload.php EmailTest"
       }
     }
     stage('Deploy') {
       steps {
-        echo "3"
+        echo "--------------------Deploy Stage---------------------"
       }
     }
   }
