@@ -22,7 +22,8 @@ pipeline {
     stage('Deploy') {
       steps {
         echo "--------------------Deploy Stage---------------------"
-        sh "python ReadFileXML.py"
+        sh "chmod +x PHPUnit/Deploy.sh"
+        sh "./Deploy.sh"
       }
     }
   }
