@@ -10,4 +10,4 @@ print "Success: " + Result["assertions"]
 if Number_of_Errors > 0:
 	print "Can't deploy"
 else:
- 	os.system("rsync -v ./PHPUnit/*   -e ssh /  root@192.168.141.203:/usr/share/nginx/html")
+ 	os.system("rsync -v /var/lib/jenkins/workspace/Pipeline/PHPUnit/*.php   -e ssh /  root@192.168.141.203:/usr/share/nginx/html")
