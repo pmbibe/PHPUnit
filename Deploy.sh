@@ -1,4 +1,8 @@
 #!/bin/bash
-Result=`python Test.py`
-echo $Result
-export Result
+Result=`python Result.py`
+if [ $Result -eq 0 ]
+then
+whoami
+else
+pwd
+fi
