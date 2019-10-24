@@ -22,7 +22,7 @@ pipeline {
     stage('Deploy') {
       steps {
         echo "--------------------Deploy Stage---------------------"
-        sh "rsync -v ./PHPUnit/*   -e ssh /  root@192.168.141.203:/usr/share/nginx/html"
+        sh "python ReadFileXML.py"
       }
     }
   }
