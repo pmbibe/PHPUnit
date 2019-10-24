@@ -6,6 +6,7 @@ pipeline {
     stage('Prepare') {
       steps {
         echo "1"
+        sh "git clone https://github.com/pmbibe/PHPUnit"
       }
     }
     stage('Test') {
