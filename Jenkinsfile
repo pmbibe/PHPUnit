@@ -10,7 +10,7 @@ pipeline {
         sh "git clone https://github.com/pmbibe/PHPUnit"
         sh "phpunit --version"
         sh "whoami"
-        sh "sudo su"
+        sh "su -"
         sh "whoami"
       }
     }
